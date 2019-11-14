@@ -10,6 +10,7 @@ public class SysUserService {
     @Autowired
     private SysUserMapper sysUserMapper;
 
+
     public SysUser findByUserName(String userName){
         return sysUserMapper.findByUserName(userName);
     }
