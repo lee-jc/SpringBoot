@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache updateCheck="false" dynamicConfig="false"
+         maxBytesLocalHeap="500M" >
+    <diskStore path="java.io.tmpdir"/>
+
+    <cache name="users" timeToLiveSeconds="40"/>
+
+</ehcache>

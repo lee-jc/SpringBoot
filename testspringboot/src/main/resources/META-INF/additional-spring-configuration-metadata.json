@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring.datasource.duid.url",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.duid.url."
+  }
+] }
