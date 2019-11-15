@@ -18,23 +18,6 @@ public class IndexController {
         return "index";
     }
 
-    /**
-     * 没有加shiro权限注解
-     * @return
-     */
-    @RequestMapping("/test1")
-    public String test1(){
-        return "你只是个普通人";
-    }
 
-    /**
-     * 添加了shiro权限注解，需要用户有"systemUserAdd"权限
-     * @return
-     */
-    @RequestMapping("/test2")
-    @RequiresPermissions("systemUserAdd")
-    public String test2(){
-        return "您是大佬管理员";
-    }
 
 }

@@ -44,7 +44,7 @@ public class LoginController {
         }catch (IncorrectCredentialsException e){
             model.addAttribute("message","密码错误");
         }catch (Throwable e){
-            model.addAttribute("message","密码错误");
+            model.addAttribute("message","未知错误");
         }
         return "login";
     }
@@ -52,7 +52,7 @@ public class LoginController {
     /**
      * 退出
      */
-    @RequestMapping
+    @RequestMapping("/logout")
     public String logout(){
         SecurityUtils.getSubject().logout();
         return "login";

@@ -7,7 +7,7 @@
     <title>登录</title>
 </head>
 <body>
-<h1>${message}</h1>
+<h1 style="color: red">${message}</h1>
 <form method="post" action="/login">
     用户名：<input name="username"><br>
       密码：<input name="password" type="password"><br>

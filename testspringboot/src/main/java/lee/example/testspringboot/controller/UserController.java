@@ -1,14 +1,14 @@
 package lee.example.testspringboot.controller;
 
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import lee.example.testspringboot.model.TabUser;
 import lee.example.testspringboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @RestController 复合注解，相当于@ResponseBody＋@Controller合在一起的作用,会自动返回json类型的数据

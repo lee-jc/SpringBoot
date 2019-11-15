@@ -7,6 +7,7 @@
     <title>首页</title>
 </head>
 <body>
-hello ${userName}
+hello ${userName}<br>
+<a href="/logout">退出登录</a>
 </body>
 </html>
