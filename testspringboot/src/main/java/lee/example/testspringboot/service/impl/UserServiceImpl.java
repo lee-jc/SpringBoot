@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
+    @Override
     public Page<TabUser> getUsers() {
         return userMapper.getUsers();
     }
@@ -22,6 +23,7 @@ public class UserServiceImpl implements UserService {
      * @Cacheable 在方法执行前Spring先查看缓存中是否存在，如果存在，则直接返回缓存数据，若不存在则调用方法并将方法返回值放进缓存
      * @CachePut 无论怎样，都会将方法的返回值放到缓存中。@CachePut的属性与@Cacheable保持一致
      */
+    @Override
     @Cacheable(cacheNames = "users",key = "#id")//使用ehcache.xml配置users缓存，用用户id作为缓存主键
     public TabUser selectById(long id){
         System.out.println("没有缓存，开始查询数据库……");
@@ -32,6 +34,7 @@ public class UserServiceImpl implements UserService {
     /**
      * @CacheEvict 	将一条或多条数据从缓存中删除。
      */
+    @Override
     @CacheEvict(value = "users",key = "#id")
     public void evictUser(Long id) {
         System.out.println("evict user:" + id);
